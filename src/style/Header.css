@@ -49,17 +49,19 @@
 }
 .header_option {
   display: flex;
-  flex-direction: column;
+  flex-direction: column !important;
   margin-left: 10px;
   margin-right: 10px;
   color: white;
 }
 .header_option_line_one {
   font-size: 13px;
+  color: white !important;
 }
 .header_option_line_two {
   font-size: 20px;
   font-weight: 800;
+  color: white !important;
 }
 .header_add_cart_icon {
   font-size: 35px;

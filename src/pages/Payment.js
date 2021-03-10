@@ -52,19 +52,20 @@ function Payment() {
         payment_method: {
           card: elements.getElement(CardElement),
         }
-      }).then(({ paymentIntent } ) => {
+      })
+      .then(({ paymentIntent }) => {
         // paymentIntent = payment confirmation
-console.log('this is testing mode >>>>',paymentIntent);
-        db.collection("users")
-          .doc(user?.uid)
-          .collection("orders")
-          .doc(paymentIntent.id)
-          .set({
-            basket: basket,
-            amount: paymentIntent.amount,
-            created: paymentIntent.created,
-          });
-
+// console.log('this is testing mode >>>>',paymentIntent);
+//         db.collection("users")
+//           .doc(user?.uid)
+//           .collection("orders")
+//           .doc(paymentIntent.id)
+//           .set({
+//             basket: basket,
+//             amount: paymentIntent.amount,
+//             created: paymentIntent.created,
+//           }); 
+       
         setSucceeded(true);
         setError(null);
         setProcessing(false);
